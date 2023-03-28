@@ -1,0 +1,33 @@
+ALGORITHM FOUND_ELEMENTS
+VAR
+set1,set2: ARRAY_OF_INTEGER;
+i,j:INTEGER
+sum:INTEGER :=0
+found:BOOLEAN
+BEGIN
+    FOR i FROM 0 TO set1.length-1    DO
+        found:=FALSE
+    END_FOR
+    FOR j FROM 0 TO set2.length-1 DO
+        IF (set1[i]=set2[j]) THEN
+            found:=TRUE
+        END_IF
+
+        IF(not found) THEN
+        sum:=sum+found 
+        END_IF
+    END_FOR 
+
+    FOR j FROM 0 TO set2.length-1 DO 
+        found:=FALSE
+    END_FOR
+
+    FOR i FROM 0 TO set1.length-1 DO
+        IF (set1[j]=set1[i]) THEN
+            found:=TRUE
+        END_IF  
+    
+        IF(not found) THEN
+        sum:=sum+found 
+        END_IF
+    END_FOR 
